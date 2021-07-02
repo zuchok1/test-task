@@ -1,0 +1,96 @@
+.modal
+  visibility: hidden 
+  opacity: 0
+  &__overlay
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    backdrop-filter: blur(5px)
+    z-index: 300
+  &__dialog
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 301
+    padding: 33px 88px 0 88px 
+    background-color: #0A223D
+    border-radius: 8px 
+    max-width: 478px
+    max-height: 95%
+    overflow-y: scroll
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      display: none
+  &-buy-close
+    position: absolute
+    top: 17px
+    right: 18px
+  &__title
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+    margin-bottom: 15px
+    color: #FFFFFF
+    text-align: center
+  &__form
+    min-width: 301px
+    font-size: 12px
+    line-height: 15px
+  &__input, &__textarea
+    color: #333333
+    background-color: #ffffff
+    border-radius: 4px
+    outline: none
+    border: none
+    padding: 18px 23px
+    width: 100%
+  &__input-wrapper
+    margin-bottom: 15px
+    position: relative
+  &__textarea
+    resize: none
+    margin-bottom: 15px
+    align-self: center
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 33px
+  &__button
+    min-width: 160px
+    min-height: 50px
+    padding: 18px 5px
+    color: #ffffff
+    font-weight: bold
+    background-color: #f13c6e
+    border-radius: 4px
+  &__info
+    display: block
+    color: #e0e0e0
+    white-space: nowrap
+
+.input-wrapper label 
+  text-decoration: underline
+  position: absolute
+  bottom: 2px
+  left: 23px
+  z-index: 500
+
+.invalid 
+  color: #ff6347
+
+@media (max-width: 576px)
+  .modal
+    &__dialog
+      width: 92%
+      padding: 33px 0 0 0
+    &__form
+      width: 92%
+      min-width: 0
+      max-width: 301px
+      margin: auto
